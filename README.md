@@ -1,5 +1,15 @@
-Backport dts2pts bsf filter form ffmpeg 6
+Backport dts2pts bsf filter from FFMpeg 6
+=========================================
 
+How to compile minimal ffmpeg-core (without codecs and other) for awesome
+https://github.com/ffmpegwasm/ffmpeg.wasm
+
+* step 0 - Install [emsdk](https://emscripten.org/docs/getting_started/downloads.html)
+* step 1 - Modify `step1_configure.sh`, change string like:  --enable-demuxer=avi,h264. Run it.
+* step 2 - Run: ./step2_ffmpegwasm.sh -o out_dir/ffmpeg.js
+* step 3 - Read https://ffmpegwasm.netlify.app/docs/overview
+
+=============
 FFmpeg README
 =============
 
