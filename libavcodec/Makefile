@@ -1177,6 +1177,7 @@ OBJS-$(CONFIG_AV1_METADATA_BSF)           += av1_metadata_bsf.o
 OBJS-$(CONFIG_AV1_FRAME_MERGE_BSF)        += av1_frame_merge_bsf.o
 OBJS-$(CONFIG_AV1_FRAME_SPLIT_BSF)        += av1_frame_split_bsf.o
 OBJS-$(CONFIG_CHOMP_BSF)                  += chomp_bsf.o
+OBJS-$(CONFIG_DTS2PTS_BSF)                += dts2pts_bsf.o
 OBJS-$(CONFIG_DUMP_EXTRADATA_BSF)         += dump_extradata_bsf.o
 OBJS-$(CONFIG_DCA_CORE_BSF)               += dca_core_bsf.o
 OBJS-$(CONFIG_DV_ERROR_MARKER_BSF)        += dv_error_marker_bsf.o

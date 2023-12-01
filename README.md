@@ -1,3 +1,5 @@
+Backport dts2pts bsf filter form ffmpeg 6
+
 FFmpeg README
 =============
 
