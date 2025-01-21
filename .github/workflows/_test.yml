@@ -15,8 +15,14 @@ jobs:
         run: emcc -v
       - name: Make the script files executable
         run: chmod +x step1_configure.sh step2_ffmpegwasm.sh configure ffbuild/*.sh
-      - name: Configure
+      - name: Configure and Make
         run: ./step1_configure.sh
-      - name: Make
-        run: ./step2_ffmpegwasm.sh -o out_dir/ffmpeg.js
-        
+      - name: Compile
+        run: |
+          mkdir out_dir
+          bash step2_ffmpegwasm.sh -o out_dir/ffmpeg.js
+      - name: Archive output
+        uses: actions/upload-artifact@v4
+        with:
+          name: result_dir
+          path: out_dir
