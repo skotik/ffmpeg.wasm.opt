@@ -4,11 +4,19 @@ on: [workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
     steps:
       - uses: actions/checkout@v4
       - uses: mymindstorm/setup-emsdk@v14
 
       - name: Verify
         run: emcc -v
+      - name: Make the script files executable
+        run: chmod +x step1_configure.sh step2_ffmpegwasm.sh
       - name: Configure
         run: ./step1_configure.sh
+      - name: Make
+        run: ./step2_ffmpegwasm.sh -o out_dir/ffmpeg.js
+        
