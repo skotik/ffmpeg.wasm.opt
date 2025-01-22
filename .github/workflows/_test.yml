@@ -20,7 +20,7 @@ jobs:
       - name: Compile
         run: |
           mkdir out_dir
-          bash step2_ffmpegwasm.sh -o out_dir/ffmpeg.js
+          bash step2_ffmpegwasm.sh -o out_dir/ffmpeg-core.js
       - name: Archive output
         uses: actions/upload-artifact@v4
         with:
